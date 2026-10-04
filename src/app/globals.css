@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-fusion-pixel), monospace;
+  --font-mono: var(--font-fusion-pixel), monospace;
+  --font-heading: var(--font-fusion-pixel), monospace;
+}
+
+:root {
+  --background: #000;
+  --foreground: #fff;
+  --card: #080808;
+  --card-foreground: #fff;
+  --popover: #080808;
+  --popover-foreground: #fff;
+  --primary: #fff;
+  --primary-foreground: #000;
+  --secondary: #171717;
+  --secondary-foreground: #fff;
+  --muted: #171717;
+  --muted-foreground: rgb(255 255 255 / 42%);
+  --accent: #fff;
+  --accent-foreground: #000;
+  --border: rgb(255 255 255 / 15%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #fff;
+  --scene-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-fusion-pixel), monospace;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url("/cursors/default.png") 4 4, auto;
+}
+
+a,
+button,
+[role="button"] {
+  cursor: url("/cursors/pointer.png") 4 4, pointer;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #000;
+  background: #fff;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+.pixel-grain::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px);
+  background-size: 4px 4px;
+  mix-blend-mode: screen;
+}
+
+.pixelated-image-card {
+  color: var(--color-primary, #fff);
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.pixelated-image-card__default,
+.pixelated-image-card__active,
+.pixelated-image-card__pixels {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pixelated-image-card__active {
+  z-index: 2;
+  display: none;
+}
+
+.pixelated-image-card__pixels {
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pixelated-image-card__pixel {
+  display: none;
+  position: absolute;
+}
+
+.scene-enter {
+  animation: scene-enter 820ms var(--scene-ease) both;
+}
+
+.scene-exit-up {
+  animation: scene-exit-up 480ms ease-in both;
+}
+
+.scene-exit-down {
+  animation: scene-exit-down 480ms ease-in both;
+}
+
+@keyframes scene-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scene-exit-up {
+  to {
+    opacity: 0;
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+@keyframes scene-exit-down {
+  to {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+}
+
+@keyframes pixel-float {
+  0%,
+  100% {
+    transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    transform: translate3d(0, 7px, 0);
+  }
+}
+
+@keyframes pixel-drift {
+  0%,
+  100% {
+    transform: scale(1.01) translate3d(-3px, -2px, 0);
+  }
+  50% {
+    transform: scale(1.025) translate3d(4px, 3px, 0);
+  }
+}
+
+@keyframes chevron-rise {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: translateY(3px);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translate3d(var(--marquee-shift, -50%), 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
