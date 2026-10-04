@@ -2,6 +2,21 @@
 
 个人作品集网站。UI/UX 设计师，专注 **用户需求 · 产品逻辑 · AI × UX**，擅长把复杂信息转化为清晰、易用的数字产品体验。
 
+## 🚀 在线预览
+
+**👉 [点击在线预览 → hexuanjinhe.netlify.app](https://hexuanjinhe.netlify.app/)**
+
+## 📸 作品截图
+
+| | |
+|---|---|
+| ![作品截图 01](docs/screenshots/site-01.png) | ![作品截图 02](docs/screenshots/site-02.png) |
+| ![作品截图 03](docs/screenshots/site-03.png) | ![作品截图 04](docs/screenshots/site-04.png) |
+| ![作品截图 05](docs/screenshots/site-05.png) | ![作品截图 06](docs/screenshots/site-06.png) |
+| ![作品截图 07](docs/screenshots/site-07.png) | ![作品截图 08](docs/screenshots/site-08.png) |
+| ![作品截图 09](docs/screenshots/site-09.png) | ![作品截图 10](docs/screenshots/site-10.png) |
+| ![作品截图 11](docs/screenshots/site-11.png) | |
+
 ## 关于我
 
 - 湖南科技大学 视觉传达设计专业 在读，专注 UI/UX 设计与用户体验方向，GPA 3.6/4.0，专业排名 1/40
