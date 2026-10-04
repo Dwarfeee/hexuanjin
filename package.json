@@ -1,28 +1,26 @@
 {
-  "name": "ai-website-clone-template",
-  "version": "0.3.1",
+  "name": "hexuanjin-portfolio",
+  "version": "1.0.0",
   "private": true,
-  "description": "Clone any website into a clean, modern Next.js codebase using AI coding agents",
-  "author": "JCodesMore",
+  "description": "贺宣锦 (Xuanjin.He) 的个人 UI/UX 作品集网站",
+  "author": "贺宣锦 (Xuanjin.He)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JCodesMore/ai-website-cloner-template.git"
+    "url": "https://github.com/Dwarfeee/hexuanjin.git"
   },
-  "homepage": "https://github.com/JCodesMore/ai-website-cloner-template",
+  "homepage": "https://github.com/Dwarfeee/hexuanjin",
   "bugs": {
-    "url": "https://github.com/JCodesMore/ai-website-cloner-template/issues"
+    "url": "https://github.com/Dwarfeee/hexuanjin/issues"
   },
   "keywords": [
-    "codex",
-    "claude-code",
-    "website-clone",
-    "reverse-engineering",
+    "portfolio",
+    "ui-ux",
+    "design",
     "nextjs",
-    "ai",
-    "template",
-    "tailwindcss",
-    "shadcn-ui"
+    "react",
+    "typescript",
+    "tailwindcss"
   ],
   "engines": {
     "node": ">=24"
