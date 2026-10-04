@@ -341,9 +341,8 @@ const enCopy: SiteCopy = {
     contactHeading: "Let's Connect",
     contactSubtitle: "Interested in creating meaningful digital experiences together?",
     contactSubtitleCn: "期待一起探索更有意义的数字体验。",
-    // TODO: 替换为你的邮箱或社交链接
     contactCta: "Get in touch",
-    contactHref: "mailto:your-email@example.com",
+    contactHref: "mailto:1960074210@qq.com",
     logoAlt: "Xuanjin.He",
     copyright: "Copyright © 2026 Xuanjin.He. All Rights Reserved",
     colophon: "Designed by Xuanjin.He",
